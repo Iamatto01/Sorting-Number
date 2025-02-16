@@ -5,14 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sorted Numbers</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <h1>Sorted Numbers</h1>
-    <ul>
-        {% for number in sorted_list %}
-            <li>{{ number }}</li>
-        {% endfor %}
-    </ul>
-    <a href="/">Back to Home</a>
+    <div class="container">
+        <h1 class="text-center my-4">Sorted Numbers</h1>
+        <ul class="list-group">
+            {% for number in sorted_list %}
+                <li class="list-group-item">{{ number }}</li>
+            {% endfor %}
+        </ul>
+        <a href="/" class="btn btn-primary mt-4">Back to Home</a>
+    </div>
 </body>
 </html>
